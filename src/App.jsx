@@ -193,7 +193,7 @@ function App() {
       <main>
         <div className="editor-section">
           <div className="section-header">
-            <h2>编辑区</h2>
+            <h2><i className="ri-edit-line"></i> 编辑区</h2>
           </div>
           <textarea
             value={markdownText}
@@ -204,7 +204,7 @@ function App() {
           
           <div className="settings-panel">
             <div className="section-header">
-              <h2>设置</h2>
+              <h2><i className="ri-settings-3-line"></i> 设置</h2>
             </div>
             <div className="settings-content">
               <div className="setting-item">
@@ -233,10 +233,12 @@ function App() {
         
         <div className="preview-section">
           <div className="section-header">
-            <h2>预览区</h2>
+            <h2><i className="ri-eye-line"></i> 预览区</h2>
             <div className="preview-info">
               {totalPages > 0 && (
-                <span className="page-count">共 {totalPages} 页</span>
+                <span className="page-count">
+                  <i className="ri-file-list-line"></i> 共 {totalPages} 页
+                </span>
               )}
             </div>
           </div>
@@ -269,7 +271,7 @@ function App() {
               disabled={pages.length === 0}
               className="action-button"
             >
-              <span className="button-icon">↓</span>
+              <i className="ri-download-line button-icon"></i>
               下载当前页
             </button>
             <button 
@@ -277,12 +279,12 @@ function App() {
               disabled={pages.length === 0}
               className="action-button action-button-primary"
             >
-              <span className="button-icon">⇩</span>
+              <i className="ri-download-2-line button-icon"></i>
               下载所有页
             </button>
           </div>
           <div className="copyright">
-            {new Date().getFullYear()} Markdown转图片工具
+            <i className="ri-copyright-line"></i> {new Date().getFullYear()} Markdown转图片工具
           </div>
         </div>
       </footer>
